@@ -1,0 +1,24 @@
+\documentclass[utf8]{ctexart}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{wrapfig}
+\title{质能方程推导}
+\author{limbo137}
+\date{\today}
+\begin{document}
+\maketitle
+首先，我们定义一些量\[\beta=\frac{dx}{cdt}=\tanh{\sigma}\]
+\[\gamma=\frac{1}{\sqrt{1-\beta^2}}=\cosh{\sigma}=\frac{dt}{d\tau}\]
+其中$\sigma$称为\textbf{快度},$\tau$称为\textbf{固有时}
+\\在狭义相对论中，动量可表示为\[p=m_0\frac{dx}{d\tau}\]
+可进一步写成\[p=m_0c\beta\gamma=m_0c\sinh{\sigma}\]
+定义力\[f=\frac{dp}{dt}\]
+其做功为能量变化，即\[dE=fdx\]
+将力定义代入，有\[dE=m_0c\frac{dx}{dt}d\sinh{\sigma}=m_0c^2\sinh{\sigma}d\sigma\]
+两边积分，初态\[\beta=\tanh{\sigma}=0,\gamma=\cosh{\sigma}=1\]于是有\[E=m_0c^2(\gamma-1)\]
+若定义$m=\gamma m_0$,则有\[E=mc^2-m_0c^2\]
+\end{document}

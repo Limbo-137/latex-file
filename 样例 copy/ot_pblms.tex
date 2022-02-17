@@ -1,0 +1,248 @@
+\documentclass[utf8]{ctexart}
+\linespread{1.65}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{wrapfig}
+\usepackage{hyperref}
+\renewcommand\partname{Part}
+\title{样例}
+\author{limbo137}
+\begin{document}
+\section{温差电}
+\subsection{题目}
+德国物理学家塞贝克发现不同导体接在一起时，如果存在温度差，回路中将产生电流，因而发明出了温差电池。温差电动势可解释为金属中自由电子气通过定向运动，传递原子实振动能量的结果(杜隆-珀替定律告诉我们电子气对金属热容的贡献可以忽略不计)。现认为自由电子气遵循理想气体压强公式$p=nkT$，压强全部来自金属原子实热振动的贡献，并且电子数密度$n$与温度无关，电阻率$\rho$随温度成线性变化
+
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\item
+  电子与原子实的碰撞可采用弹性刚球的模型进行描述。现考虑一柱形导体，上下底接入电源，使得导体内部电场为$E$，已知电子在导体内部运动的平均碰撞时间间隔为\(\tau\)，电子带电荷为$e$，质量为$m$。
+\end{enumerate}
+
+
+计算单个电子在导体中的平均速度\(\overline{v}\)
+
+已知柱形导体横截面为$S$，电子数密度为$n$，计算电流$I$
+
+电阻率\(\rho\)是材料本身属性，证明:任意柱形导体电阻率\(\rho\)无关于电场$E$，横截面$S$，以及导体长度
+
+
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\setcounter{enumi}{1}
+\item
+  进一步假定平均碰撞时间的微小增量\(d\tau\)正比于
+  \(\tau dT\)，且\(\tau\vert _{T=T_0}=\tau_0\)。计算\(\tau\)与温度\(T\)的函数关系式。
+\end{enumerate}
+
+现给一条热电偶回路，只由A,B两个柱形导体“$69$”拼接而成。
+
+电阻率分别为\[\rho_{A} = \rho_{1}(1 + \alpha_{1}\left( T - T_{0} \right), \rho_{B} = \rho_{2}(1 + \alpha_{2}\left( T - T_{0} \right)\]。在平衡态下，两个拼接处温度为\(T_1,T_2\)。
+
+由微观欧姆定律知电流密度\[\overrightarrow{j} = \frac{1}{\rho}({\overrightarrow{E}}_\text{温差} + {\overrightarrow{E}}_\text{静电})\]
+
+由\(p = nkT\)可得电子的平均受力\[f = \frac{\text{dp}}{\text{ndx}} = k\frac{\text{dT}}{\text{dx}}\]
+
+证明对于温差不大且随温度线性变化的电阻，温差电动势\[\varepsilon_\text{温差} = \oint_{}^{}{{\overrightarrow{E}}_\text{温差}\text{dx}} \approx \alpha\left( T_{1} - T_{2} \right) + \frac{1}{2}\beta\left( T_{1} - T_{2} \right)^{2}\]
+
+其中$\alpha$和$\beta$为与导体形状有关的比例系数。又在温度为$T_0$时电子的平均碰撞间隔满足$$\tau_0=\frac{1}{\pi d^2 n\bar{v}}$$其中$\bar{v}=\sqrt{8kT_0 \over \pi m}$表示电子平均运动速率。(积分时可以视$\lambda(T-T_0)$是个小量)
+
+\subsection{答案}
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\item
+  1.在不考虑温度对电阻率影响情况下，不妨直接取含源电路中导体的一部分进行分析。电子在连续的两次碰撞间在电场力作用下获得定向运动速度，对应加速度$a=\frac{eE}{m}$，则经过时间$\tau$获得的平均速度为
+  \[v=\frac12 a\tau={eE\tau \over 2m}\]
+\end{enumerate}
+
+
+代入电流的微观表达式有
+
+\[I=nes\bar{v}={ne2sE\tau \over 2m}\]
+
+上下同乘$l$代换得到$I$与$U$的关系并直接使用欧姆定律有
+
+\[R=\frac{2ml}{ne^2\tau S}\]
+
+进一步得到$\rho=\frac{2m}{ne^2\tau}$其中$m$均表示电子质量
+
+2.依题意得到
+
+$d\tau=\lambda\tau dT$其中$\lambda$为比例系数
+
+两边分离变量后积分，注意到$\tau|_{T=T_0}=\tau_0$有
+
+\[\int_{\tau_0}^{\tau}{\frac{d\tau}{\tau}=\int_{T_0}^{T}\lambda dT}\Leftrightarrow\tau=\tau_0e^{\lambda(T-T_0)}\]
+（2）取一段均匀金属直导线，以温度降落方向为$n$方向，取$n$一段自由电子气分析两端压强差，依题意对理想气体压强公式取微分有
+
+
+\[dp=nkdT\]
+
+则此段自由电子气中每个电子的平均受力为
+
+\[f=\frac{dp}{ndx}=k\frac{dT}{dx}\]
+
+仿照(1)计算有电子定向运动的平均速率为
+
+\[\bar{v}=\frac{1}{2}a\tau=\frac{kdT}{2mdx}\tau\]
+
+进一步得到导体内电流密度
+
+\[j^{\rightarrow}=-env^-=-en kdT/2mdx \tau\]
+
+电流密度贡献分静电场与温差电场两部分
+\[\vec{j}=\frac{1}{\rho}(E_\text{温差}+E_\text{静电})\Leftrightarrow E_\text{温差}=\rho j-E_\text{静电}\]
+
+对闭合回路作积分，注意到回路中静电势降落为0，则
+
+\begin{align*}
+    \oint \vec{E}_\text{温差} \cdot d\vec{x}&=\oint （\rho\vec{j}-\vec{E}_\text{静电}）\cdot d\vec{x}=\rho j \cdot d\vec{x}\\
+    &=\int_{T_1}^{T_2}\rho_1[1+α_1 (T-T_1)]en{k\over 2m}[\tau_0e^{\lambda_1(T-T_1)}]dT \\ 
+    &+\int_{T_2}^{T_1}\rho_2[1+α_2(T-T_2)]en{k\over 2m}[\tau_0e^{\lambda_2(T-T_2)}]dT\\
+    &=\rho_1 en{k\over 2m}\int_{T_1}^{T_2}[1+α_1 (T-T_1)][\tau_0e^{\lambda_1(T-T_1)}]dT \\ 
+    &+\rho_2 en{k\over 2m}\int_{T_2}^{T_1}[1+α_2(T-T_2)]\tau_0e^{\lambda_2(T-T_2)}]dT\\
+    &=\rho_1en{k\over 2m}\int_{T_1}^{T_2}[1+α_1 (T-T1)][\tau_0 \sum_{n=0}^\infty\frac{\lambda_1(T-T_1)^n}{n!})]dT \\ & +\rho_2en{k\over 2m}\int_{T_2}^{T_1}[1+α_2(T-T_2)][\tau_0 \sum_{n=0}^\infty\frac{\lambda_2(T-T_2)^n}{n!}]dT
+\end{align*}
+
+积分后忽略级数中的高次项得到
+
+\begin{align*}
+    &\approx \rho_1en\frac{k\tau_0}{2m}[\frac{\alpha_1+\lambda_1}{2}(T_2-T_1)^2+(T_2-T_1)]\\ &+\rho_2en\frac{k\tau_0}{2m}[\frac{\alpha_2+\lambda_2}{2}(T_1-T_2)^2+(T_1-T_2)]\\
+    &=en\frac{k\tau_0}{2m}[(\rho_1\frac{\alpha_1+\lambda_1}{2}+\rho_2\frac{\alpha_2+\lambda_2}{2})(T_2-T_1)^2+(\rho_1-\rho_2)(T_2-T_1)]\\
+    &=\frac{1}{\pi d^2\sqrt{\frac{8kT_0}{\pi m}}}e\frac{k}{2m}[(\rho_1\frac{\alpha_1+\lambda_1}{2}+\rho_2\frac{\alpha_2+\lambda_2}{2})(T_2-T_1)^2+\\ &(\rho_1-\rho_2)(T_2-T_1)]
+\end{align*}
+\section{牛顿光学}
+\subsection{题目}
+光在空间中传播的路径满足费马原理$\delta \int{nds=0}$，这一表达式恰与分析力学中的哈密顿原理$\delta\int{L(q,q^\prime,t)}dt=0$相类似，因此有些物理学家会把光类比成一个个特别的实物粒子来处理(听起来很像是牛爵爷当年建立的微粒说)。我们略去中间建立哈密顿光学的繁琐过程，不加证明地知道以下几点：光源在折射率分布为$n(\vec{r})$的介质的${\vec{r}}_0$处发出光线，这束光线可视作速度方向与光线方向相同且动能为$E_k=\frac{1}{2}n(\vec{r})^2$的实物粒子，而粒子速度大小为$n(\vec{r})$。现空间内充满有一种折射率会随着电场变化的介电常数为$\varepsilon_r$的特殊介质，折射率分布满足$n(\vec{r})=\sqrt{\chi E(\vec{r})}$。若在空间内放置一根无限长的均匀带正电直线，线密度为$\eta$。以带电直线为$z$轴建立正交坐标架$o-xyz$(显然这里的原点$O$是任意的)。在$(a,b,0)$处放置一点光源$A$沿$\vec{y}$方向发射出激光。
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\item
+  写出折射率分布函数
+\item
+  已知光粒子的经典总能量视作$0$，试根据势能梯度求出光粒子在介质中的受力表达式
+\item
+  a.说明光粒子在势场中是角动量守恒的，求出激光的轨迹方程\\
+  b.如果要求点光源发出的激光恰好可以为$(-\frac{\sqrt3}{3}a,a,0)$处的一个传感器所接收到，求出$a,b,\chi$之间的关系
+\end{enumerate}
+
+\begin{quote}
+提示：\[\overset{⃑}{r} \times \overset{⃑}{v} = rv*\sin\left\langle \overset{⃑}{r},\overset{⃑}{v} \right\rangle = rv*\frac{\text{rdθ}}{\sqrt{dr^{2} + r^{2}d\theta^{2}}}\]
+\end{quote}
+
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\setcounter{enumi}{3}
+\item
+  OA所在平面上有另外一个点光源B，如果想让点光源B发出的激光在平面内做圆周运动，那么B发出的光线方向与其坐标应该满足什么条件？
+\end{enumerate}
+\section{偏振光和自旋}
+
+\section*{Part A.光的本质是电磁学？哪来的角动量?}
+
+\subsection*{一、光的电磁波本质与线偏振光}
+电动力学指出真空中的Maxwell方程组：
+
+本题并不强制推导光的波动方程。这并不是本题的考察范围。所以作为证明题，你可以在后面部 分中使用该部分的结论。
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\item
+  证明：$c = \frac{1}{\sqrt{\varepsilon_0 \mu_0}}$，$\vec{E}$垂直于光线的传播方向
+\item
+  证明:存在这样一个解：\
+  \begin{align*}
+    E_{x}&=E_0 \cos(\omega (\frac{z}{c}-t))\\
+    E_y&=0\\
+    E_z&=0
+  \end{align*}
+\end{enumerate}
+光线向z传播，，始终 都沿x方向,这种振动方向沿一条直线的光叫作偏振光。
+
+\subsection*{二、圆偏振光}
+接下来我们在某个确定的:$xOy$平面上考察光在该平面上的电场$E_x$,$E_y$ (光还是沿着$z$轴传播) 考察这样的两束重合的线偏振光,其电场分别为：
+\[
+  \begin{cases}
+    E_{1x}&=E_0 \cos{\omega t}\\
+    E_{1y}&=0
+  \end{cases}
+,
+  \begin{cases}
+    E_{2x}&=0\\
+    E_{2y}&=E_0 \sin{\omega t}
+  \end{cases}
+\]
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\item
+  求解两束光的相位差
+\item
+  描述叠加后的xOy平面內电场的变化情况。转动是逆时针还是顺时针？\label{it:ef}
+\end{enumerate}
+在处理光的量子化时，我们使用圆偏振光，这是因为光子的自旋是$\hslash $，自旋就是固有的角动量， 并不是由于机械转动产生的，你可以理解为光子在自转，也就对应了圆偏振光。换句话说，如果 有一个圆偏振激光器射出激光，那么在里面抓出一个光子，它一定是自旋为$\hslash $，并且方向一定 都是相同的。在本题(\ref{it:ef})中的转动情况。我们规定自旋角动量沿$z$轴，而对反方向转动的，我们规 定角动量沿$-z$轴。在本题接下来的部分中，我们默认考察该平面，且自旋角动量表示其$z$分量， 即一个是$\hslash $，—个是$-\hslash $，规定逆时针为左旋，顺时针为右旋。
+
+\section*{Part B.电场的合成和分解——看看光子转的多快吧}
+\subsection*{一、光的量子化}
+首先不要害怕，这整道题对于量子力学的掌握没有任何要求，但是有必要规定一下光子是如何实 现量子化的。首先你在看$x-y$平面上的电场时，电场强度的变化就是光的偏振态，比如线偏振， 圆偏振，等等。然后我们来规定一下何为“偏振态”。顾名思义，就是把偏振情况用某个和电场强 度正比的矢量表示。但是显然这个矢量的大小是需要被唯一确定的。因为显然无论光强多大，只 要是左旋圆偏振光，你抓一个光子出来它的角动量一定是$\hslash $，不可能是其的整数倍，过几个小 问来建立对这一点的认识。
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\item 
+  首先我们要解决的是“偏振态”的解，既然左/石旋是“基本单位”，很自然的想到讲偏振光分解 为左/右旋的叠加。规定:左/右旋态是一个长度为1的矢量进行逆/顺时针绕原点转动的状态。
+
+  当我们将某个偏振态分解为左旋和右旋的叠加时，不妨设左旋长度为$a$,右旋长度为$b$,有要求 $a^2+b^2=1$,请利用这一点，求出线偏振态的矢量的最大长度，并将线偏振态分解为左右旋的叠 加，并想想线偏振态是否有角动量。
+\item 
+  考察两束重合且电场处处垂直且同为左旋的圆偏振光，此时显然可以进行电场叠加，类似的 也可以进行偏振态叠加。注意这里单独看其中一个光束的偏振态模长仍为1,但此处考察“合成 后”的光场的偏振态0,将其分解至1,2方向，由于1,2两偏振态相互正交，不会产生“干涉”，所以 可以认为。偏振态的角动量可分解为1,2偏振态的角动量之和.由此求出光的偏振态的角动量和模 长的关系。
+\item 
+  将一个偏振态分解为左旋和右旋的叠加，左/右旋长度分别为$a,b$，求此时偏振态的角动量
+\end{enumerate}
+\section*{Part C.偏振态角动量的概率和量子力学理解}
+我们曾在Part A中说过:光子在某方向上的角动量一定是$\pm \hslash $，那么如同上一题中的偏振态角动 量是如何出现的呢？这其实是统计的结果。简单来说就是测量得到角动量为$\pm \hslash $的概率是有分布的，导致长时间的测量结果是统计平均值。注意此问对PartD的求解并非必要，量子力学指出 如果一个态$|\psi\rangle  =a|+\rangle + b |-\rangle $，其中$|\psi\rangle $表示偏振态，而$|+\rangle $与$|-\rangle $表示左旋和右旋，那 么进行测量时$|\psi\rangle $处于$| + \rangle $和$| -\rangle $的概率分别是$a^2$和$b^2$.
+\subsection*{一、归一化以及与上一问的统一}
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\item 
+  给出$a^2+b^2$的值，并解释。
+\item 
+  求该偏振态的角动量
+\end{enumerate}
+\subsection*{二、线偏振态}
+\begin{enumerate}
+  \def\labelenumi{(\arabic{enumi})}
+\item 
+  请将线偏振态$|\psi\rangle $写成$a|+\rangle + b |-\rangle$的形态
+\item 
+  计算其角动量
+\end{enumerate}
+\section*{Part D.椭圆偏振光?我来了！}
+本问将通过几个部分计算出椭圆偏振态的角动量，以及一些实际上的简单应用。
+\subsection*{一、正椭圆偏振态}
+正椭圆偏振态是由相位差为$\frac{\pi}{2} $的$x$和$y$方向的电场产生。已知$x,y$方向电场的最大值分别为 $E_x,E_y(E_x>E_y)$，试求出其对应偏振态的：
+\begin{enumerate}
+  \def\labelenumi{(\arabic{enumi})}
+\item 
+  长轴与短轴长度
+\item 
+  角动量的值
+\end{enumerate}
+\subsection*{二、一般情况}
+一般的椭圆偏振态是由相位差为$\varphi$的$x$和$y$方向电场产生，已知$x,y$方向电场的最大值分别为$E_x,E_y$试求出偏振态的：
+\begin{enumerate}
+  \def\labelenumi{(\arabic{enumi})}
+\item 
+长短轴长度(不必比大小)
+\item 
+长轴/短轴与坐标轴的夹角(互余，互补，加$90^\circ $等均可)
+\item 
+角动量的值
+\end{enumerate}
+\subsection*{三、小应用}
+一束圆偏振光射入双折射晶体后出射，由于双折射晶体的特殊性质，原本某两个正交方向的电 场振动相位差由$\varphi $变为$\varphi(0 < \varphi<\frac{\pi}{2})$。已知圆偏振光为左旋，激光器功率为$P$,光频率为$\nu$, 试求：
+\begin{enumerate}
+  \def\labelenumi{(\arabic{enumi})}
+\item 
+单位时间内通过晶体的光子数 
+\item 
+晶体受到的力矩大小
+\end{enumerate}
+\end{document}

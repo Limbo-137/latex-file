@@ -1,0 +1,129 @@
+\begin{thebibliography}{21}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}\else
+  \providecommand\doi[1]{\href{https://doi.org/#1}{\nolinkurl{#1}}}\fi
+
+\bibitem[保(1972.11)]{保护世界文化和自然遗产公约}
+保护世界文化和自然遗产公约\allowbreak[M].
+\newblock [出版地不详]: 联合国教科文组织, 1972.11.
+
+\bibitem[保(2003.11)]{保护非物质文化遗产公约}
+保护非物质文化遗产公约\allowbreak[M].
+\newblock [出版地不详]: 联合国教科文组织, 2003.11.
+
+\bibitem[陈安泽(2013.8)]{旅游地学大辞典}
+陈安泽.
+\newblock 旅游地学大辞典\allowbreak[M].
+\newblock [出版地不详]: 科学出版社, 2013.8.
+
+\bibitem[Urry(2008.4)]{游客凝视}
+URRY~J.
+\newblock 游客凝视\allowbreak[M].
+\newblock [出版地不详]: 广西师范大学出版社, 2008.4.
+
+\bibitem[秦晋(2012)]{秦晋2012平遥以中国}
+秦晋.
+\newblock 平遥以中国 “四大”
+  古城之一神州龟城中国华尔街声望远逸\allowbreak[J].
+\newblock 中国地名, 2012, 10.
+
+\bibitem[Shannon(1948)]{shannon1948mathematical}
+SHANNON~C~E.
+\newblock A mathematical theory of communication\allowbreak[J].
+\newblock The Bell system technical journal, 1948, 27\penalty0 (3):\penalty0
+  379-423.
+
+\bibitem[纪江明\ 等(2021)纪江明 and
+  张乐天]{农村老年人社区养老满意度及影响因素研究}
+纪江明, 张乐天.
+\newblock
+  农村老年人社区养老满意度及影响因素研究——基于多分类因变量Logistic
+  模型的实证分析\allowbreak[J].
+\newblock 浙江社会科学, 2021, 4:\penalty0 68-80.
+
+\bibitem[魏明祥(2002)]{魏明祥2002丹东古城互通式立交的排水设计}
+魏明祥.
+\newblock 丹东古城互通式立交的排水设计\allowbreak[J].
+\newblock 辽宁交通科技, 2002, 4.
+
+\bibitem[赵阔宇(2011)]{赵阔宇2011浅谈边坡生态防护技术在古城墙保护中绿化的应用}
+赵阔宇.
+\newblock
+  浅谈边坡生态防护技术在古城墙保护中绿化的应用\allowbreak[J].
+\newblock 河北林业科技, 2011, 3.
+
+\bibitem[李中建\ 等(2017)李中建, 罗芳, 冯庆,
+  et~al.]{李中建2017平遥古城游客特征研究}
+李中建, 罗芳, 冯庆, 等.
+\newblock
+  平遥古城游客特征研究——兼与丽江古城的对比分析\allowbreak[J].
+\newblock 河南科学, 2017\penalty0 (2017 年 07):\penalty0 1174-1180.
+
+\bibitem[张纯\ 等(2007)张纯, 吕斌, 孙莉,
+  et~al.]{张纯2007游客体验的模糊综合评价方法}
+张纯, 吕斌, 孙莉, 等.
+\newblock
+  游客体验的模糊综合评价方法——基于宜昌市景区的问卷调查\allowbreak[D].
+\newblock [出版地不详: 出版者不详], 2007.
+
+\bibitem[张爱权(2019)]{张爱权2019平遥古城旅游开发与保护的对策}
+张爱权.
+\newblock 平遥古城旅游开发与保护的对策\allowbreak[J].
+\newblock 前进, 2019, 5.
+
+\bibitem[王潞\ 等(2018)王潞, 徐畅, and
+  杨霄雄]{王潞2018平遥古城原真性与旅游体验}
+王潞, 徐畅, 杨霄雄.
+\newblock 平遥古城原真性与旅游体验\allowbreak[J].
+\newblock 旅游纵览 (下半月), 2018, 7.
+
+\bibitem[余向洋\ 等(2006)余向洋, 朱国兴, and
+  邱慧]{余向洋2006游客体验及其研究方法述评}
+余向洋, 朱国兴, 邱慧.
+\newblock 游客体验及其研究方法述评\allowbreak[D].
+\newblock [出版地不详: 出版者不详], 2006.
+
+\bibitem[尚悦(2016)]{尚悦2016地方文化资源保护开发的困境与对策}
+尚悦.
+\newblock 地方文化资源保护开发的困境与对策\allowbreak[J].
+\newblock 现代商贸工业, 2016, 33.
+
+\bibitem[张星(2015)]{张星2015文化旅游目的地游客满意度研究}
+张星.
+\newblock 文化旅游目的地游客满意度研究\allowbreak[D].
+\newblock [出版地不详]: 北京交通大学, 2015.
+
+\bibitem[孟凡辉(2008)]{孟凡辉2008济南护城河风貌保护与发展}
+孟凡辉.
+\newblock 济南护城河风貌保护与发展\allowbreak[D].
+\newblock [出版地不详]: 山东大学, 2008.
+
+\bibitem[林哲宇\ 等(2017)林哲宇 and
+  张宝全]{林哲宇2017浅析建筑施工中的施工环境污染问题与防治策略}
+林哲宇, 张宝全.
+\newblock
+  浅析建筑施工中的施工环境污染问题与防治策略\allowbreak[J].
+\newblock 收藏, 2017, 9.
+
+\bibitem[周传馨(2013)]{周传馨2013宾州古城景区植物景观规划研究}
+周传馨.
+\newblock 宾州古城景区植物景观规划研究\allowbreak[J].
+\newblock 广西城镇建设, 2013, 3.
+
+\bibitem[Nisbett et~al.(1977)Nisbett and Wilson]{nisbett1977halo}
+NISBETT~R~E, WILSON~T~D.
+\newblock The halo effect: evidence for unconscious alteration of
+  judgments.\allowbreak[J].
+\newblock Journal of personality and social psychology, 1977, 35\penalty0
+  (4):\penalty0 250.
+
+\bibitem[Ries(2006)]{ries2006understanding}
+RIES~A.
+\newblock Understanding marketing psychology and the halo effect\allowbreak[J].
+\newblock Advertising Age, 2006, 17.
+
+\end{thebibliography}

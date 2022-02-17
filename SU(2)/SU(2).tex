@@ -1,0 +1,153 @@
+\documentclass[hyperref,UTF8]{ctexart}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{gbt7714}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{wrapfig}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{booktabs}
+%\usepackage[a4paper,left=3.18cm,right=3.18cm,top=2.54cm,bottom=2.54cm]{geometry}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{hyperref}
+\newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
+\setCJKfamilyfont{song}{SimSun}
+\title{SU(2)}
+\author{limbo137}
+\begin{document}
+\maketitle
+我们取旋量的一种规范
+\[ \lvert \psi \rangle =\begin{pmatrix}
+    \cos \frac{\theta}{2}e^{i \frac{\phi}{2}}\\
+    \sin \frac{\theta}{2}e^{-i \frac{\phi}{2}}
+\end{pmatrix}\]
+容易证明其满足
+\[\langle \psi\vert \psi \rangle =1\]
+为保证上式, $\vert \psi \rangle$的演化方程
+\begin{equation}
+    \frac{\mathrm{d}}{\mathrm{d}t}\vert \psi \rangle=A\vert \psi \rangle \label{eq:evl} 
+\end{equation}
+
+的解有形式
+\[\vert \psi(t) \rangle=U\vert \psi(0) \rangle\]
+其中 $U$满足 
+\[U^\dagger U=1\]
+且
+\begin{equation}
+    \det U =1 \label{eq:det}
+\end{equation}
+
+全体这样的算子的集合组成SU(2)lie群
+
+根据演化方程(\ref{eq:evl}),我们有
+\[U=e^{At}\]
+于是
+\[\det U=\det e^{At}=e^{\text{Tr}At}\]
+按照(\ref{eq:det}),有
+\[\text{Tr} A=0\]
+全体A的集合称为lie群SU(2)的lie代数,这里可以看出SU(2)的lie代数都是迹零的反厄米矩阵\footnote{写成矩阵是该群的一种表示}.
+
+我们来看这个群的具体表示,首先我们仍考虑演化方程,我们有时也称其为二维自洽系统
+\[\begin{pmatrix}
+    \dot{u}\\\dot{v}
+\end{pmatrix}=i\begin{pmatrix}
+    a& b\\
+    c&d
+\end{pmatrix}\begin{pmatrix}
+    u\\v
+\end{pmatrix}\]
+中间乘 $i$的目的是让中间的矩阵成为厄米的，解决这种问题的一般思路往往是对角化,而对角化中的矩阵我们使用上面的$U$来做基变换,中间矩阵的特征方程是
+\[\lambda^2-(a+d)\lambda+ad-bc=\lambda^2-\text{Tr A}\lambda+\det A=0\]
+其本征值是
+\[\lambda=\frac{\text{Tr A}}{2} \pm \frac{\sqrt{(\text{Tr A})^2-4\det A}}{2}\]
+所以当 $\text{Tr A}=0$时， $\lambda=\pm i\sqrt{\det A}$ 
+
+但我们其实有更好的方式，由厄米和迹零性，我们可以改写上面的矩阵
+\[\begin{pmatrix}
+    \dot{u}\\\dot{v}
+\end{pmatrix}=i\begin{pmatrix}
+    z& x+yi\\
+    x-yi&-z
+\end{pmatrix}\begin{pmatrix}
+    u\\v
+\end{pmatrix}\]
+其中 $a,b,c$是实数，其中 $b,c$定义与上不同，继续改写为 
+\[\begin{pmatrix}
+    \dot{u}\\\dot{v}
+\end{pmatrix}=(ix\begin{pmatrix}
+    0& 1\\
+    1&0
+\end{pmatrix}+iy\begin{pmatrix}
+    0& i\\
+    -i&0
+\end{pmatrix}+iz\begin{pmatrix}
+    1& 0\\
+    0&-1
+\end{pmatrix})\begin{pmatrix}
+    u\\v
+\end{pmatrix}\]
+定义
+\[\sigma_x=\begin{pmatrix}
+    0& 1\\
+    1&0
+\end{pmatrix},\sigma_y=\begin{pmatrix}
+    0& i\\
+    -i&0
+\end{pmatrix},\sigma_z=\begin{pmatrix}
+    1& 0\\
+    0&-1
+\end{pmatrix}\]
+于是
+\[\begin{pmatrix}
+    \dot{u}\\\dot{v}
+\end{pmatrix}=i\vec{r}\cdot\vec{\sigma}\begin{pmatrix}
+    u\\v
+\end{pmatrix}\]
+且
+\[\det (i\vec{r}\cdot\vec{\sigma})=|\vec{r}|^2\]
+所以对角化后
+\[\begin{pmatrix}
+    \dot{u}\\\dot{v}
+\end{pmatrix}'=ir\sigma_z\begin{pmatrix}
+    u\\v
+\end{pmatrix}'\]
+其中 $r=\sqrt{|\vec{r}|^2}$ 
+\\解是
+\[\begin{pmatrix}
+    u\\v
+\end{pmatrix}'=e^{ir\sigma_z}\begin{pmatrix}
+    u'_0\\v'_0
+\end{pmatrix}=(I\cos r+i\sigma_z\sin r)\begin{pmatrix}
+    u'_0\\v'_0
+\end{pmatrix}\]
+又
+\[U^\dagger irt\sigma_z  U=i\vec{r}\cdot\vec{\sigma}\]
+所以
+\[\begin{pmatrix}
+    u\\v
+\end{pmatrix}=e^{i\vec{r}\cdot\vec{\sigma}t}\begin{pmatrix}
+    u_0\\v_0
+\end{pmatrix}=(I\cos rt+i\vec{n}\cdot\vec{\sigma}\sin rt)\begin{pmatrix}
+    u_0\\v_0
+\end{pmatrix}\]
+其中
+\[r\vec{n}=\vec{r}\]
+上面的作用相当于以 $\vec{r}$的角速度旋转 
+
+设 $rt=\theta$，有
+\[e^{i\theta\vec{n}\cdot\vec{\sigma}}=(I\cos \theta+i\vec{n}\cdot\vec{\sigma}\sin \theta)\]
+特殊地
+\[e^{i\theta\sigma_z}=(I\cos \theta+i\sigma_z\sin \theta)=\begin{pmatrix}
+    e^{i\theta}&0\\
+    0&e^{-i\theta}
+\end{pmatrix}\]
+同时
+\[(\vec{a}\cdot\vec{\sigma})(\vec{b}\cdot\vec{\sigma})=\vec{a}\cdot\vec{b}I+i(\vec{a}\times \vec{b})\cdot\vec{\sigma}\]
+所以
+\[[(\vec{a}\cdot\vec{\sigma}),(\vec{b}\cdot\vec{\sigma})]=2i(\vec{a}\times \vec{b})\cdot\vec{\sigma}\]
+\end{document}

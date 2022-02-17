@@ -1,0 +1,408 @@
+\documentclass[hyperref,UTF8]{ctexbook}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{gbt7714}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{wrapfig}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{booktabs}
+%\usepackage[a4paper,left=3.18cm,right=3.18cm,top=2.54cm,bottom=2.54cm]{geometry}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{hyperref}
+\hypersetup{hypertex=true,
+            colorlinks=true,
+            linkcolor=red,
+            anchorcolor=blue,
+            citecolor=red}
+\newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
+\newtheorem{eg}{例}[chapter]
+\newtheorem{theorem}{定理}[chapter]
+\setCJKfamilyfont{song}{SimSun}
+\title{现代数学物理教程\\群，希尔伯特空间和微分几何}
+\author{Peter Szekeres\\limbo137译}
+\begin{document}
+\maketitle
+\tableofcontents
+\chapter{集合和结构}
+（填充）
+\section{集合和逻辑}
+（填充）
+\section{子集，集合的交和并}
+（填充）
+\subsection{交和并}
+（填充）
+\section{笛卡尔积和关系}
+（填充）
+\subsection{有序对和笛卡尔积}
+（填充）
+\subsection{关系}
+（填充）
+\subsection{等价关系}
+（填充）
+\subsection{序关系和偏序集合}
+（填充）
+\section{映射}
+（填充）
+\subsection{单射，满射和双射}
+（填充）
+\section{无限集}
+（填充）
+\subsection{可数集}（填充）
+\subsection{不可数集}（填充）
+\subsection{连续统和选择公理}（填充）
+\section{结构}（填充）
+\subsection{代数结构}（填充）
+\subsection{几何结构}（填充）
+\subsection{动力系统}（填充）
+\section{范畴论}（填充）
+\chapter{群}
+\section{群论的元素}
+集合 $G$上任意一对 $g,h\in G$，都存在 $gh\in G$称为其\textbf{乘积}(product)，满足
+\begin{enumerate}
+    \item[(Gp1)]\label{gp:1}
+    \textbf{结合律}(associative law): 对全体 $g,h,k\in G$有$g(hk)=(gh)k$  
+    \item[(Gp2)] \label{gp:2}
+    存在\textbf{恒等元}(identity element): $e\in G$,使得对全体\(g\in G\)
+    \[eg=ge=g\]
+    \item[(Gp3)] \label{gp:3}
+    每个群元 $g\in G$有\textbf{逆}(inverse) $g^{-1}\in G$ 使得\[g^{-1}g=gg^{-1}=e\] 
+\end{enumerate}
+这样的集合称为\textbf{群}(group)
+
+对任意两个元素都存在乘积，且乘积在群内，这个性质称为\textbf{封闭性}(closure property)
+
+类似的，可证明每个$g\in G$ 都有唯一逆 $g^{-1}$且 $(gh)^{-1}=h^{-1}g^{-1}$ 
+\\
+如果群元可交换，即\[gh=hg\]总成立，则称群是\textbf{阿贝尔的}(abelian)，如果群乘法写成加法的形式，那我们默认其是阿贝尔的， $g$ 的逆是$-g$ 
+
+集合 $H\subseteq G$满足:
+\begin{enumerate}
+    \item[(a)] $h,k\in H\Rightarrow hk\in H$ 
+    \item[(b)] $e\in H$ 
+    \item[(c)] $h\in H,h^{-1}\in H$ 
+\end{enumerate} 
+$H$称为 $G$的子群，无需结合律(Gp1),因为结合律自动继承下来了  
+\begin{eg}
+    全体实数和加法形成一个群，称为实数加法群(additive group of reals). $e=0$,$x$的逆是 $-x$ ，整数加法群和有理数加法群显然都是 $\mathbb{R}$的子群 
+\end{eg}
+\begin{eg}
+    非零实数$\dot{\mathbb{R}}=\mathbb{R}-\{0\}$形成一个群，称作实数乘法群(multiplication group of reals)，群乘法是普通乘法，恒等元$e=1$
+    类似的，$\mathbb{\dot{Q}}$也是$\mathbb{\dot{R}}$的子群
+    $\mathbb{C}$上同样有加法群，$\mathbb{\dot{C}}$上同样有乘法群
+\end{eg}
+\section{变换和排列群}（填充）
+\section{矩阵群}
+\subsection{线性变换}
+$\mathbb{R}^{n}$是 $n\times 1$实列向量空间
+\[\vec{x}=\begin{pmatrix}
+    x_1\\x_2\\x_3\\\vdots\\x_n
+\end{pmatrix}\]  
+\subsection{矩阵群}
+全体$n\times n$非奇异方阵组成一个群，记作 $GL(n,\mathbb{R})$ 原因在于行列式乘积法
+\[\det(AB)=det(A)det(B)\] 
+利用这一点可证明非奇异方阵可以组成一个群，满足封闭性，结合律以及可逆
+
+在复数情况也可以做类似的讨论，记作$GL(n,\mathbb{C})$，与上面的实数情况并称为\textbf{n阶一般线性群}(general linear group of order n)，其子群即群乘法为矩阵乘法的，统称为\textbf{矩阵群}(matrix groups)
+\begin{eg}
+    $n$阶的特殊线性群(special liner group)或称幺模群(unimodular group)记作$SL(n,\mathbb{R})$
+\end{eg}
+\section{同态和同构}
+\subsection{同态}
+两个群$G$和$G'$,映射$\varphi : G \mapsto G'$保持群乘法，$$
+\varphi(a b)=\varphi(a) \varphi(b)
+$$
+则称这个映射是同态 (homomorphism)
+\begin{theorem}
+    在同态映射下$G$的单位元映射到$G'$的单位元，任意元素之逆映为像元素之逆
+\end{theorem}
+\begin{eg}
+    对任意实数$x\in \mathbb{R}$整数部分(integral part)记成$[x]$，小数部分(fractional part)写成$(x)=x-[x]$，显然$0 \leqslant(x)<1$\\
+    在$[0,1]$区间上定义模\(1\)加法$$
+    a+b \bmod 1=(a+b)
+    $$
+    这个群是阿贝尔的，称为实数模\(1\)群，\(a\)的逆元是\(1-a\)，\(0\)的逆元是\(0\)
+\end{eg}
+
+\subsection{同构}（填充）
+\subsection{自同构和共轭类}（填充）
+\section{正规子群和商群}（填充）
+\subsection{陪集}（填充）
+\subsection{正规子群}（填充）
+\subsection{商群}（填充）
+\subsection{同态的核}（填充）
+\section{群作用}（填充）
+\section{对称群}（填充）
+\chapter{向量空间}（填充）
+\section{环和域}（填充）
+\section{向量空间}（填充）
+\section{向量空间的同态}（填充）
+\section{向量空间的子空间和商空间}（填充）
+\subsection{互补子空间和商空间}（填充）
+\subsection{线性映射的像和核}（填充）
+\section{向量空间的基}（填充）
+\subsection{集合张成的子空间}（填充）
+\subsection{向量空间的基}（填充）
+\subsection{线性算符的矩阵}（填充）
+\subsection{基扩张定理}（填充）
+\section{求和惯例和基变换}（填充）
+\subsection{求和惯例}（填充）
+\subsection{基变换}（填充）
+\section{对偶空间}（填充）
+\subsection{线性泛函}（填充）
+\subsection{线性空间的对偶空间}（填充）
+\subsection{对偶的对偶}（填充）
+\subsection{余向量分量的变换法则}（填充）
+\chapter{线性算符和矩阵}（填充）
+\section{本征空间和特征方程}（填充）
+\subsection{不变子空间}（填充）
+\subsection{本征向量和本征值}（填充）
+\subsection{特征方程}（填充）
+\subsection{最小零化多项式}（填充）
+\section{约当标准形}（填充）
+\subsection{分块对角形}（填充）
+\subsection{幂零算子}（填充）
+\subsection{约当标准形}（填充）
+\section{线性常微分方程}（填充）
+\subsection{二维自洽体系}（填充）
+\section{群表示论简介}（填充）
+\subsection{不可约表示}（填充）
+\subsection{舒尔引理}（填充）
+\chapter{内积空间}（填充）
+\section{实内积空间}（填充）
+\subsection{实内积的分量}（填充）
+\subsection{正交标准基}（填充）
+\section{复内积空间}（填充）
+\subsection{向量的范数}（填充）
+\subsection{正交标准基}（填充）
+\subsection{幺正变换}（填充）
+\section{有限群的表示}（填充）
+\subsection{正交关系}（填充）
+\chapter{代数}（填充）
+\section{代数和理想}（填充）
+\subsection{理想和商代数}（填充）
+\section{复数和复结构}（填充）
+\subsection{实向量空间的复化}（填充）
+\subsection{向量空间的复结构}（填充）
+\section{四元数和Clifford代数}（填充）
+\subsection{四元数}（填充）
+\subsection{Clifford代数}（填充）
+\section{Grassmann代数}（填充）
+\subsection{多重向量}（填充）
+\subsection{外积}（填充）
+\subsection{外积的性质}（填充）
+\section{李群和李代数}（填充）
+\subsection{矩阵李群}（填充）
+\subsection{单参数子群}（填充）
+\subsection{复李代数}（填充）
+\chapter{张量}（填充）
+\section{自由向量空间和张量空间}（填充）
+\subsection{自由向量空间}（填充）
+\subsection{张量基}（填充）
+\subsection{张量积的对偶表示}（填充）
+\subsection{自由结合代数}（填充）
+\subsection{Grasmann代数作为自由代数的商代数}（填充）
+\section{多线性映射和张量}（填充）
+\subsection{多重线性映射和$(r,s)$型张量}（填充）
+\subsection{二阶协变张量}（填充）
+\subsection{二阶逆变张量}（填充）
+\subsection{混合张量}（填充）
+\section{张量的基表示}（填充）
+\subsection{张量积}（填充）
+\subsection{基变换}（填充）
+\section{张量的作用}（填充）
+\subsection{缩并}（填充）
+\subsection{升高降低指标}（填充）
+\subsection{对称性}（填充）
+\chapter{外代数}（填充）
+\section{r-向量和r-形式}（填充）
+\subsection{算符A的反对称化}（填充）
+\section{r-向量的基表示}（填充）
+\section{外积}（填充）
+\subsection{简单p-向量及其子空间}（填充）
+\section{内积}（填充）
+\section{定向的向量空间}（填充）
+\subsection{n-向量和n-形式}（填充）
+\subsection{n-向量和n-形式的变换法则}（填充）
+\subsection{有向的向量空间}（填充）
+\subsection{$\epsilon$-符号}（填充）
+\section{Hodge对偶}（填充）
+\subsection{p-向量的内积}（填充）
+\subsection{Hodge星算子}（填充）
+\chapter{狭义相对论}（填充）
+\section{闵可夫斯基时空}（填充）
+\subsection{庞加莱和洛伦兹变换}（填充）
+\subsection{仿射几何}（填充）
+\subsection{闵可夫斯基空间和4-张量}（填充）
+\section{狭义相对论运动学}（填充）
+\subsection{狭义洛伦兹变换}（填充）
+\subsection{时间，张度，速度的相对性}（填充）
+\section{粒子动力学}（填充）
+\subsection{世界线和固有时}（填充）
+\subsection{相对论性粒子动力学}（填充）
+\section{电动力学}（填充）
+\subsection{4-张量场}（填充）
+\subsection{电磁学}（填充）
+\subsection{势和规范变换}（填充）
+\section{守恒定律和能动张量}（填充）
+\subsection{电荷守恒}（填充）
+\subsection{能动张量}（填充）
+\chapter{拓扑}（填充）
+\section{欧氏拓扑}（填充）
+\section{广义拓扑空间}（填充）
+\section{矩阵空间}（填充）
+\section{诱导拓扑}（填充）
+\subsection{诱导拓扑和拓扑乘积}（填充）
+\subsection{同化拓扑}（填充）
+\section{豪斯多夫空间}（填充）
+\section{紧空间}（填充）
+\section{连通空间}（填充）
+\section{拓扑群}（填充）
+\subsection{单位元的连通分量}（填充）
+\section{拓扑向量空间}（填充）
+\subsection{巴拿赫空间}（填充）
+\chapter{测度论和积分}（填充）
+\section{可测空间和函数}（填充）
+\subsection{可测空间}（填充）
+\subsection{可测函数}（填充）
+\section{测度空间}（填充）
+\subsection{勒贝格测度}（填充）
+\section{勒贝格积分}（填充）
+\subsection{勒贝格控制收敛定理}（填充）
+\chapter{分布}（填充）
+\section{测试函数和分布}（填充）
+\subsection{测试函数空间}（填充）
+\subsection{分布}（填充）
+\subsection{正规分布}（填充）
+\section{分布上的算符}（填充）
+\subsection{分布的微分}（填充）
+\subsection{$\delta$-函数的变量代换}（填充）
+\section{傅立叶变换}（填充）
+\section{格林函数}（填充）
+\subsection{柏松方程}（填充）
+\subsection{波动方程的格林函数}（填充）
+\chapter{希尔伯特空间}（填充）
+\section{定义和例子}（填充）
+\section{扩张定理}（填充）
+\subsection{子空间}（填充）
+\subsection{正交标准基}（填充）
+\section{线性泛函}（填充）
+\subsection{正交子空间}（填充）
+\subsection{Riesz表示定理}（填充）
+\section{有界线性算符}（填充）
+\subsection{伴随算符}（填充）
+\subsection{哈密顿算符}（填充）
+\subsection{幺正算符}（填充）
+\section{谱理论}（填充）
+\subsection{本征向量}（填充）
+\subsection{有界算符的谱}（填充）
+\subsection{哈密顿算符的谱}（填充）
+\section{无界算符}（填充）
+\subsection{自伴和对称算符}（填充）
+\subsection{无界算符的谱}（填充）
+\chapter{量子力学}（填充）
+\section{基本概念}（填充）
+\subsection{光子偏振实验}（填充）
+\subsection{态的希尔伯特空间}（填充）
+\subsection{可观测量}（填充）
+\subsection{量子力学中的无界算符}（填充）
+\section{量子动力学}（填充）
+\subsection{海森堡图景}（填充）
+\subsection{经典力学和波动力学的对应关系}（填充）
+\subsection{谐振子}（填充）
+\subsection{角动量}（填充）
+\section{对称变换}（填充）
+\subsection{无穷小生成元}（填充）
+\subsection{粒子数守恒}（填充）
+\subsection{离散对称性}（填充）
+\subsection{全同粒子}（填充）
+\section{量子统计力学}（填充）
+\subsection{密度算符}（填充）
+\subsection{系综}（填充）
+\subsection{全同粒子体系}（填充）
+\chapter{微分几何}（填充）
+\section{可微流形}（填充）
+\section{可微映射和曲线}（填充）
+\section{切空间，余切空间和张量空间}（填充）
+\subsection{切矢量}（填充）
+\subsection{余切空间和张量空间}（填充）
+\subsection{向量和张量场}（填充）
+\subsection{坐标变换}（填充）
+\subsection{张量丛}（填充）
+\section{切映射和子流形}（填充）
+\subsection{切映射和映射的拉回}（填充）
+\subsection{子流形}（填充）
+\section{对易子，流和李导数}（填充）
+\subsection{对易子}（填充）
+\subsection{积分曲线和流}（填充）
+\section{分布和Frobenius定理}（填充）
+\chapter{可微形式}（填充）
+\section{微分形式和外导数}（填充）
+\section{外导数的性质}（填充）
+\section{Frobenius定理：对偶形式}（填充）
+\section{热力学}（填充）
+\subsection{热力学第二定律}（填充）
+\subsection{绝对熵和温度}（填充）
+\section{经典力学}（填充）
+\subsection{变分学}（填充）
+\subsection{拉格朗日力学}（填充）
+\subsection{哈密顿力学}（填充）
+\subsection{拉格朗日力学和哈密顿力学之间的联系}（填充）
+\chapter{流形上的积分}（填充）
+\section{单位分解}（填充）
+\section{n-形式的积分}（填充）
+\section{stokes定理}（填充）
+\subsection{常规定义域}（填充）
+\section{同调和上同调}（填充）
+\subsection{有序单纯形和欧氏空间中的链}（填充）
+\subsection{流形上的单纯同调}（填充）
+\subsection{De Rham上同调群和对偶性}（填充）
+\section{庞加莱引理}（填充）
+\subsection{电动力学}（填充）
+\chapter{联络和曲率}（填充）
+\section{线性联络和测地线}（填充）
+\subsection{坐标变换}（填充）
+\section{张量场的协变导数}（填充）
+\section{曲率和挠率}（填充）
+\subsection{挠率张量}（填充）
+\subsection{曲率张量}（填充）
+\section{伪黎曼流形}（填充）
+\subsection{黎曼联络}（填充）
+\subsection{测地坐标}（填充）
+\section{测地偏离方程}（填充）
+\section{黎曼张量及其对称性}（填充）
+\subsection{比安基恒等式}（填充）
+\section{嘉当标准形}（填充）
+\subsection{嘉当标准形中的伪黎曼空间}（填充）
+\subsection{局域平直空间}（填充）
+\section{广义相对论}（填充）
+\subsection{等效原理}（填充）
+\subsection{广义相对论的基本假设}（填充）
+\subsection{曲率张量的测量}（填充）
+\subsection{线性近似}（填充）
+\subsection{史瓦西解}（填充）
+\section{宇宙学}（填充）
+\section{时空的变分原理}（填充）
+\subsection{希尔伯特作用量}（填充）
+\subsection{场的能动张量}（填充）
+\chapter{李群和李代数}（填充）
+\section{李群}（填充）
+\subsection{左不变向量场}（填充）
+\subsection{李群的李代数}（填充）
+\subsection{Maurer-Cartan关系}（填充）
+\section{指数映射}（填充）
+\subsection{指数映射}（填充）
+\section{李子群}（填充）
+\subsection{矩阵李群}（填充）
+\section{李群的变换}（填充）
+\subsection{正规子群}（填充）
+\section{保度规群}（填充）
+\subsection{球对称}（填充）
+
+
+\end{document}

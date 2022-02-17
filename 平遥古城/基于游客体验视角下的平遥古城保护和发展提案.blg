@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2020/W32TeX)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: »ùÓÚÓÎ¿ÍÌåÑéÊÓ½ÇÏÂµÄÆ½Ò£¹Å³Ç±£»¤ºÍ·¢Õ¹Ìá°¸.aux
+The style file: gbt7714-numerical.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: pingyao.bib
+Warning--empty author and editor in ä¿æŠ¤ä¸–ç•Œæ–‡åŒ–å’Œè‡ªç„¶é—äº§å…¬çº¦
+Warning--empty author and editor in ä¿æŠ¤éžç‰©è´¨æ–‡åŒ–é—äº§å…¬çº¦
+You've used 21 entries,
+            4281 wiz_defined-function locations,
+            995 strings with 9357 characters,
+and the built_in function-call counts, 41638 in all, are:
+= -- 1670
+> -- 3416
+< -- 5005
++ -- 1953
+- -- 602
+* -- 453
+:= -- 6348
+add.period$ -- 61
+call.type$ -- 21
+change.case$ -- 29
+chr.to.int$ -- 1601
+cite$ -- 25
+duplicate$ -- 378
+empty$ -- 999
+format.name$ -- 169
+if$ -- 10706
+int.to.chr$ -- 1
+int.to.str$ -- 22
+missing$ -- 0
+newline$ -- 113
+num.names$ -- 57
+pop$ -- 994
+preamble$ -- 1
+purify$ -- 21
+quote$ -- 0
+skip$ -- 3654
+stack$ -- 0
+substring$ -- 2429
+swap$ -- 34
+text.length$ -- 152
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 249
+warning$ -- 2
+while$ -- 197
+width$ -- 0
+write$ -- 276
+(There were 2 warnings)

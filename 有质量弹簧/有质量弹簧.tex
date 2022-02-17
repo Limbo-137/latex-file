@@ -1,0 +1,40 @@
+\documentclass[hyperref,UTF8]{ctexart}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{gbt7714}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{wrapfig}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{booktabs}
+%\usepackage[a4paper,left=3.18cm,right=3.18cm,top=2.54cm,bottom=2.54cm]{geometry}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{hyperref}
+\newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
+\setCJKfamilyfont{song}{SimSun}
+\title{有质量弹簧}
+\author{limbo137}
+\begin{document}
+\maketitle
+\section{离散弹簧的连续化}
+\begin{enumerate}
+    \item \(u_i\)：第\(i\)个质点的坐标
+    \item \(\varepsilon\)：每个质点之间原长的间隔
+\end{enumerate}
+\subsection{自由情况}
+设$\kappa = kl$，每一个\(\varepsilon\)的弹性系数$=nk=kl/\varepsilon=\kappa/\varepsilon$，其中\(n=L/\varepsilon\)
+
+利用牛顿方程，我们有
+\[\frac{\kappa}{\varepsilon}(u_{i+1}-u_{i}-\varepsilon)-\frac{\kappa}{\varepsilon}(u_i-u_{i-1}-\varepsilon)=\lambda\varepsilon\ddot{u_i}\]
+连续化，有
+\[\kappa(\frac{\partial u}{\partial x}|_{x+\varepsilon}-\frac{\partial u}{\partial x}|_{x})=\lambda\varepsilon\ddot{u}\]
+则有
+\[\frac{\partial^2 u}{\partial x^2}=\frac{\lambda}{\kappa}\frac{\partial^2 u}{\partial t^2}\]
+设\(u=A_i e^{i(\omega t-kx)}\)
+有\[k^2=\frac{\lambda}{\kappa }\omega^2\]
+\end{document}

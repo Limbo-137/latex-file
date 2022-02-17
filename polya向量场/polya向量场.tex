@@ -1,0 +1,46 @@
+\documentclass[hyperref,UTF8]{ctexart}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{gbt7714}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{wrapfig}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{booktabs}
+%\usepackage[a4paper,left=3.18cm,right=3.18cm,top=2.54cm,bottom=2.54cm]{geometry}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{hyperref}
+\newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
+\setCJKfamilyfont{song}{SimSun}
+\title{polya向量场}
+\author{limbo137}
+\begin{document}
+对于复函数 $w=u+iv$可以看作在 $(x,y)$处具有下面的向量场,
+\[\begin{pmatrix}
+    u\\v
+\end{pmatrix}\]  
+但这样的向量场的性质往往不尽如人意,但是我们对于复数,有下面两种导数的定义
+\[\begin{aligned}
+    \frac{\partial}{\partial z} &=\frac{\partial x}{\partial z} \frac{\partial}{\partial x}+\frac{\partial y}{\partial z} \frac{\partial}{\partial y} \\
+    &=\frac{\partial}{\partial x}-i \frac{\partial}{\partial y}:=\partial
+    \end{aligned}
+\]
+以及
+\[\begin{aligned}
+    \frac{\partial}{\partial \bar{z}} &=\frac{\partial x}{\partial \bar{z}} \frac{\partial}{\partial x}+\frac{\partial y}{\partial \bar{z}} \frac{\partial}{\partial y} \\
+    &=\frac{\partial}{\partial x}+i \frac{\partial}{\partial y}:=\bar{\partial}
+    \end{aligned}\]
+注意到解析函数天然地满足
+\[\partial \bar{w}=\bar{\partial} w=0\]
+对于任意可导函数,
+\[\begin{aligned}
+    \partial \bar{w} &=\left(\frac{\partial}{\partial x}+i \frac{\partial}{\partial y}\right)(u-i v) \\
+    &=\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}+i\left(\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y}\right)
+    \end{aligned}
+\]
+\end{document}

@@ -1,0 +1,48 @@
+\contentsline {chapter}{\numberline {第一章\hspace {.3em}}世界矢量和自旋矢量的几何}{9}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Minkowski矢量空间}{9}{section.1.1}%
+\contentsline {section}{\numberline {1.2}类光方向和自旋变换}{16}{section.1.2}%
+\contentsline {section}{\numberline {1.3}洛伦兹变换的一些性质}{28}{section.1.3}%
+\contentsline {section}{\numberline {1.4}零标和自旋矢量}{31}{section.1.4}%
+\contentsline {section}{\numberline {1.5}旋量对象和自旋结构}{31}{section.1.5}%
+\contentsline {section}{\numberline {1.6}旋量算符的几何}{31}{section.1.6}%
+\contentsline {chapter}{\numberline {第二章\hspace {.3em}}抽象指标和旋量代数}{33}{chapter.2}%
+\contentsline {section}{\numberline {2.1}抽象指标方法的动机}{33}{section.2.1}%
+\contentsline {section}{\numberline {2.2}张量代数的抽象指标形式}{33}{section.2.2}%
+\contentsline {section}{\numberline {2.3}基}{33}{section.2.3}%
+\contentsline {section}{\numberline {2.4}流形上G的全部自反性}{33}{section.2.4}%
+\contentsline {section}{\numberline {2.5}旋量代数}{33}{section.2.5}%
+\contentsline {chapter}{\numberline {第三章\hspace {.3em}}旋量和世界张量}{35}{chapter.3}%
+\contentsline {section}{\numberline {3.1}世界张量作为旋量}{35}{section.3.1}%
+\contentsline {section}{\numberline {3.2}零标和复类光矢量}{35}{section.3.2}%
+\contentsline {section}{\numberline {3.3}对称算符}{35}{section.3.3}%
+\contentsline {section}{\numberline {3.4}旋量算符的张量表示}{35}{section.3.4}%
+\contentsline {section}{\numberline {3.5}在同一观点下张量和旋量的简单主张}{35}{section.3.5}%
+\contentsline {section}{\numberline {3.6}洛伦兹变换}{35}{section.3.6}%
+\contentsline {chapter}{\numberline {第四章\hspace {.3em}}微分和曲率}{37}{chapter.4}%
+\contentsline {section}{\numberline {4.1}流形}{38}{section.4.1}%
+\contentsline {section}{\numberline {4.2}协变导数}{38}{section.4.2}%
+\contentsline {section}{\numberline {4.3}联络依赖的导数}{38}{section.4.3}%
+\contentsline {section}{\numberline {4.4}旋量的微分}{38}{section.4.4}%
+\contentsline {section}{\numberline {4.5}旋量分量的微分}{38}{section.4.5}%
+\contentsline {section}{\numberline {4.6}曲率旋量}{38}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Einstein-Cartan-Sciama-Kibble理论的旋量表达}{38}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Weyl张量和Bel-Robinson张量}{38}{section.4.8}%
+\contentsline {section}{\numberline {4.9}对易子的旋量形式}{38}{section.4.9}%
+\contentsline {section}{\numberline {4.10}Bianchi恒等式的旋量形式}{38}{section.4.10}%
+\contentsline {section}{\numberline {4.11}曲率旋量和自旋系数}{38}{section.4.11}%
+\contentsline {section}{\numberline {4.12}紧凑的自旋系数形式}{38}{section.4.12}%
+\contentsline {section}{\numberline {4.13}Cartan方法}{38}{section.4.13}%
+\contentsline {section}{\numberline {4.14}在2-表面上的应用}{38}{section.4.14}%
+\contentsline {section}{\numberline {4.15}自旋球谐函数}{38}{section.4.15}%
+\contentsline {chapter}{\numberline {第五章\hspace {.3em}}时空中的场}{39}{chapter.5}%
+\contentsline {section}{\numberline {5.1}电磁场和它的导数算符}{39}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Einstein-Maxwell方程组的旋量形式}{39}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Rainich条件}{39}{section.5.3}%
+\contentsline {section}{\numberline {5.4}矢量丛}{39}{section.5.4}%
+\contentsline {section}{\numberline {5.5}杨-Mills场}{39}{section.5.5}%
+\contentsline {section}{\numberline {5.6}共形缩放}{39}{section.5.6}%
+\contentsline {section}{\numberline {5.7}一致性条件}{39}{section.5.7}%
+\contentsline {section}{\numberline {5.8}各类场量的共形不变性}{39}{section.5.8}%
+\contentsline {section}{\numberline {5.9}场的精确集}{39}{section.5.9}%
+\contentsline {section}{\numberline {5.10}光锥上的初始数据}{39}{section.5.10}%
+\contentsline {section}{\numberline {5.11}显式场积分}{39}{section.5.11}%

@@ -1,0 +1,69 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{wrapfig}
+\begin{document}
+\begin{equation*}
+    \begin{split}
+        \lim_{\Delta x \to 0} \frac{\tan({x+\Delta x})-\tan{x}}{\Delta x}&=\lim_{\Delta x \to 0}\frac{\frac{\sin({x+\Delta x})}{\cos({x+\Delta x})}-\frac{\sin x }{\cos x} }{\Delta x} \\
+        &=\lim_{\Delta x \to 0}\frac{1}{\Delta x}\frac{\sin({x+\Delta x})\cos{x}-\cos({x+\Delta x})\sin{x}}{\cos({x+\Delta x})\cos{x}}\\
+        &=\lim_{\Delta x \to 0}\frac{\sin{\Delta x}}{\Delta x}\frac{1}{\cos({x+\Delta x})\cos x}\\
+        &=\frac{1}{\cos^2 x}=1+\tan^2 x
+    \end{split}
+\end{equation*}
+可导与连续可导的区别\\
+\textbf{所谓可导即导数存在}，即
+\begin{equation}
+    f'(x_0)=\lim_{h \to 0}\frac{f(x_0+h)-f(x_0)}{h}
+\end{equation}
+存在，特殊的，若$x_0=0$,那么即
+\begin{equation}
+    f'(0)=\lim_{h \to 0}\frac{f(0+h)-f(0)}{h}
+\end{equation}
+存在，有时这个式子还会写成
+\begin{equation}
+    f'(0)=\lim_{x \to 0}\frac{f(x)-f(0)}{x}
+\end{equation}
+(2)和(3)是完全等价的\\
+\textbf{所谓连续可导意为导数连续}\\
+连续指对一个函数$f(x)$及一点$x_0$来讲，存在等式
+\begin{equation}
+    \lim_{x \to x_0}f(x)=f(x_0)
+\end{equation}
+
+对于一个函数$f(x)$的导函数$f'(x)$来讲，在$x_0$连续意味着
+\begin{equation}
+    \lim_{x \to x_0}f'(x)=f'(x_0)
+\end{equation}
+成立，如果一个函数在$x_0$处满足(1)和(5)式，则称为在$x_0$处\textbf{连续可导},若只满足(1)，则称为在$x_0$处\textbf{可导}\\
+举例来讲，我们了考察一个具体函数
+\begin{equation}
+    f(x)=\begin{cases}
+        x^{\alpha}\sin{\frac{1}{x}},& x>0\\
+        0,& x \leqslant 0
+    \end{cases}
+\end{equation}
+若使$f(x)$在0处可导，应满足什么条件？连续可导呢？\\
+若$f(x)$在0处可导,那么直接利用(3)，有
+\begin{equation}
+    f'(0)=\lim_{x \to 0}\frac{x^{\alpha}\sin{\frac{1}{x}}-0}{x}=\lim_{x \to 0}x^{\alpha-1}\sin{\frac{1}{x}}
+\end{equation}
+可导意味着极限(7)要存在，我们知道，这个极限存在的条件是$\alpha>1$（极限存在不包括极限等于无穷大！）\\
+连续可导意味着(5)，要得到(5)的左半部分的$f'(x)$，首先要求导，我们需要知道在0处的导数，若(7)存在(即$\alpha>1$)，经过计算，我们得到(7)式若存在则必为0，于是$f'(0)=0$\\
+再对$x>0$的部分求导，就得到了完整的导数
+\begin{equation}
+    f'(x)=\begin{cases}
+        \alpha x^{\alpha-1}\sin{\frac{1}{x}}-x^{\alpha-2}\cos{\frac{1}{x}},& x>0\\
+        0,& x \leqslant 0
+    \end{cases}
+\end{equation}
+(5)左半部分的极限意味着左右极限都存在且相等，在0处，其左极限显然是0，我们考察其右极限
+\begin{equation}
+    \lim_{x \to 0^+}f(x)=\lim_{x \to 0^+}\alpha x^{\alpha-1}\sin{\frac{1}{x}}-x^{\alpha-2}\cos{\frac{1}{x}}=0=\lim_{x \to 0^-}f(x)=f'(0)
+\end{equation}
+要使该式成立，x的指数不能为负，即$\alpha>2$
+\end{document}
