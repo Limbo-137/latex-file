@@ -62,7 +62,7 @@
 \subsection{动力系统}（填充）
 \section{范畴论}（填充）
 \chapter{群}
-\section{群论的元素}
+\section{群论的元素}\label{sec:2.1}
 集合 $G$上任意一对 $g,h\in G$，都存在 $gh\in G$称为其\textbf{乘积}(product)，满足
 \begin{enumerate}
     \item[(Gp1)]\label{gp:1}
@@ -114,7 +114,7 @@ $\mathbb{R}^{n}$是 $n\times 1$实列向量空间
 \end{eg}
 \section{同态和同构}
 \subsection{同态}
-两个群$G$和$G'$,映射$\varphi : G \mapsto G'$保持群乘法，$$
+两个群$G$和$G'$,映射$\varphi : G \rightarrow G'$保持群乘法，$$
 \varphi(a b)=\varphi(a) \varphi(b)
 $$
 则称这个映射是同态 (homomorphism)
@@ -126,11 +126,53 @@ $$
     在$[0,1]$区间上定义模\(1\)加法$$
     a+b \bmod 1=(a+b)
     $$
-    这个群是阿贝尔的，称为实数模\(1\)群，\(a\)的逆元是\(1-a\)，\(0\)的逆元是\(0\)
+    这个群是阿贝尔的，称为实数模\(1\)群，\(a\)的逆元是\(1-a\)，\(0\)的逆元是\(0\)，\\
+    映射$\varphi_{1}: \mathbb{R} \rightarrow [0,1]$,$\varphi_{1}(x)=(x)$保模\(1\)加法，即$((x)+(y))=(x+y)$\\
+    类似的，$C(z)=\theta$，其中$z=|z| e^{i \theta}$,$0 \leqslant \theta<2 \pi$称为圆映射或相位映射\\
+    是与复数的乘法群同态的，模$2\pi$加法群与上例类似
 \end{eg}
+\begin{eg}
+    令$\operatorname{sign}:  S_{n} \rightarrow\{+1,-1\}$是分配给每个排列宇称的映射
+    $$\operatorname{sign}(\pi)=(-1)^{\pi}=\begin{cases}
++1, & \text {若\(\pi\)为偶} \\
+-1, & \text {若\(\pi\)为奇}
+\end{cases}
+$$
+从\ref{sec:2.1}$\operatorname{sign}$是从到实数乘法群的同态$$
+\operatorname{sign}(\pi \sigma)=\operatorname{sign}(\pi) \operatorname{sign}(\sigma)
+$$
+求行列式的映射$
+\operatorname{det}: G L(n, \mathbb{R}) \rightarrow \dot{\mathbb{R}}
+$也是一个同态
+\end{eg}
+\subsection{同构}
+同构(isomorphism)是一一到上的同态映射，$G$和$G'$若存在同构映射，则称这两个群同构(isomorphic)，记作$G \cong G^{\prime}$，这两个群在群性质上基本相同。
 
-\subsection{同构}（填充）
-\subsection{自同构和共轭类}（填充）
+同构映射的逆映射和复合也都是同构的，这表明同构是一种等价关系，所以自然的我们有等价类，所以以后我们在指一个群时，往往指的是其等价类
+
+群论是对同构群等价类的研究，通常，挑出一个等价的特殊代表是好事
+\begin{theorem}[Cayley]
+    任意$n$阶有限群都同构于排列群
+
+    证明：
+\end{theorem}
+抽象上看两个群可能并没有什么不同，但同一群的不同“具体”版本可能有不同的应用，研究线性变换群或矩阵群的“具体”的理论称为群表示论。
+\subsection{自同构和共轭类}
+\textbf{自同构}(automorphism)指同构于自身的映射$\varphi: G \rightarrow G$
+
+最平凡的例子:$\mathrm{id}_{G}: G \rightarrow G$（单位元）
+
+自同构的复合还是自同构，逆亦然（封闭性）（逆元）
+
+于是一个群的全体自同构映射也是一个群，记作$\operatorname{Aut}(G)$
+
+对于任意的$g\in G$，映射$C_g:G\rightarrow G $定义成$$
+C_{g}(a)=g a g^{-1}
+$$
+成为由$g$导出的共轭(Conjugation)，这个映射是同态的，因为$$
+C_{g}(a b)=g a b g^{-1}=g a g^{-1} g b g^{-1}=C_{g}(a) C_{g}(b)
+$$
+
 \section{正规子群和商群}（填充）
 \subsection{陪集}（填充）
 \subsection{正规子群}（填充）
